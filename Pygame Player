@@ -1,0 +1,13 @@
+import pygame
+
+path = "C:/Users/Dominik Vogel/PycharmProjects/Traver 4.0/Music/"
+sound_files = ["Flight of the Navigator.mp3"]
+
+pygame.mixer.init()
+pygame.mixer.music.set_volume(100)
+
+for sound_file in sound_files:
+    pygame.mixer.music.load(path + sound_file)
+    pygame.mixer.music.play()
+    while pygame.mixer.music.get_busy() == True:
+        continue
